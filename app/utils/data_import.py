@@ -7,4 +7,3 @@ def generate_df():
     df = pd.DataFrame.from_dict(data)
     df["Data da Compra"] = pd.to_datetime(df["Data da Compra"], format="%d/%m/%Y")
     return df
-

@@ -3,7 +3,7 @@ from utils.data_import import generate_df
 from utils.df_class import Teliframe
 
 
-st.set_page_config(layout="wide", page_title="Proposta Indecorosa", page_icon="🌛")
+st.set_page_config(layout="wide", page_title="Dashboard de Vendas", page_icon="📈")
 st.title("Dashboard de Vendas :shopping_trolley:")
 
 df = generate_df()

@@ -4,7 +4,7 @@ from utils.tools import convert_csv, success_msg
 
 st.set_page_config(
     page_title="Filtro de Dataset",
-    page_icon="🚀",
+    page_icon="📝",
     layout="wide",
 )
 df = generate_df()

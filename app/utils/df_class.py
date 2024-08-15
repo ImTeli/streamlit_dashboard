@@ -60,7 +60,8 @@ class Teliframe:
             self.rec_categoria.head(5),
             orientation='h',
             text_auto=True,
-            title='Top 5 Categorias por Receita'
+            title='Top 5 Categorias por Receita',
+            labels={'value':'Receita total'},
         )
 
     def rec_vendedores_chart(self):
@@ -69,7 +70,8 @@ class Teliframe:
             x='sum',
             y=self.df_vendedores.sort_values('sum', ascending=False).head(5).iloc[::-1].index,
             text_auto=True,
-            title='Top 5 Vendedores por Receita'
+            title='Top 5 Vendedores por Receita',
+            labels={'sum':'Receita total', 'y': 'Vendedores'},
         )
 
     def vendas_vendedores_chart(self):
@@ -78,7 +80,8 @@ class Teliframe:
             x='count',
             y=self.df_vendedores[["count"]].sort_values('count').tail(5).index,
             text_auto=True,
-            title='Top 5 Vendedores por Vendas'
+            title='Top 5 Vendedores por Vendas',
+            labels={'count':'Total de vendas', 'y': 'Vendedores'},
         )
 
     def format_number(self, value, prefix = ''):
